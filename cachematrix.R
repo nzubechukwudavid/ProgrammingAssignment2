@@ -52,10 +52,10 @@ test <- function()
   my_matrix$get()
   my_matrix$getinverse()
   cacheSolve(my_matrix)
-  my_matrix$set(matrix(c(0,5,99,66), nrow=2, ncol=2)) # Modify existing matrix
-  cacheSolve(my_matrix)   # Computes, caches, and returns new matrix inverse
-  my_matrix$get()         # Returns matrix
-  my_matrix$getinverse()  # Returns matrix inverse    
+  my_matrix$set(matrix(c(0,5,99,66), nrow=2, ncol=2)) # Modifies the existing matrix
+  cacheSolve(my_matrix)   # this Computes, caches, and returns new matrix inverse
+  my_matrix$get()         # Returns the matrix
+  my_matrix$getinverse()  # Returns the matrix inverse    
   my_matrix$get() %*% my_matrix$getinverse() # returns the identity matrix
 }
 
